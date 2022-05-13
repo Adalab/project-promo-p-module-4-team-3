@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 0 20rem;
+  width: 100%;
+  // background-color: red;
+
+  @media all and (min-width: $break_point_tablet) {
+    padding: 0 30rem 0 40rem;
+    max-width: 330rem;
+    max-width: calc(330rem + 30rem + 40rem);
+  }
+}

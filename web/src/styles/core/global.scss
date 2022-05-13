@@ -1,0 +1,55 @@
+.landing-h1 {
+  font-family: $font_merriweather;
+  font-size: 19rem;
+  font-weight: $font_w_black;
+  line-height: normal;
+  color: $col_dull_orange;
+
+  @media (min-width: $break_point_tablet) {
+    font-size: 24rem;
+  }
+}
+
+.landing-paragraph {
+  font-family: $font_open;
+  font-size: 13rem;
+  font-weight: $font_w_regular;
+  line-height: normal;
+  color: $col_dark_green_blue;
+
+  @media (min-width: $break_point_tablet) {
+    font-size: 16rem;
+  }
+}
+
+.footer-paragraph {
+  font-family: $font_open;
+  font-size: 14rem;
+  font-weight: $font_w_regular;
+  line-height: normal;
+  color: $col_brownish_grey_05;
+}
+
+.main-create {
+  min-height: calc(100vh - 110rem - 110rem);
+
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(255, 255, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  @media all and (min-width: $break_point_tablet) {
+    min-height: calc(100vh - 60rem - 110rem);
+    flex-direction: row-reverse;
+  }
+}
+
+.hidden {
+  display:none;
+}

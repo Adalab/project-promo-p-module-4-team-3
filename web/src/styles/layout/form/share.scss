@@ -1,0 +1,130 @@
+.share {
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__legend {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rem;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__nodes {
+    font-size: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $col_dull_orange;
+    margin-top: 2rem;
+  }
+
+  &__title {
+    font-family: $font_open;
+    font-weight: $font_w_semibold;
+    font-size: 18rem;
+    color: $col_gunmetal;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: 10rem;
+  }
+
+  &__up {
+    font-size: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $col_gunmetal;
+  }
+
+  &__button {
+    margin: 10rem auto 25rem;
+    width: 199rem;
+    height: 50rem;
+    color: $col_white_four;
+    font-family: $font_open;
+    font-weight: $font_w_semibold;
+    font-size: 18rem;
+    text-transform: uppercase;
+    border-radius: 12rem;
+    border-color: $col_white;
+    background-color: $col_dull_orange;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__card {
+    margin-right: 10rem;
+  }
+
+  &__div {
+    border-top: 1rem;
+    margin-bottom: 20rem;
+    border-bottom: 1rem solid $col_grayline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__div--title {
+    border-top: 1rem solid $col_grayline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title--done {
+    color: $col_gunmetal;
+    font-family: $font_open;
+    font-weight: $font_w_semibold;
+    font-size: 18rem;
+    text-align: center;
+    margin: 20rem 0 5rem 0;
+    padding-bottom: 30px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $col_dull_orange;
+    font-family: $font_open;
+    font-weight: $font_w_semibold;
+    font-size: 12rem;
+    margin: 15rem;
+    text-align: center;
+  }
+
+  &__twitter {
+    width: 181rem;
+    height: 30rem;
+    border-radius: 3rem;
+    background-color: $col_azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__link {
+      font-family: $font_open;
+      font-size: 14rem;
+      color: $col_white_four;
+    }
+  }
+
+  &__share__twi {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.buttonOrange {
+  background-color: $col_white_five;
+}

@@ -1,0 +1,17 @@
+@import "core/normalize";
+@import "core/reset";
+@import "core/variables";
+@import "core/global";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "layout/main";
+@import "layout/main-landing";
+@import "layout/main-preview";
+
+@import "layout/form/design";
+@import "layout/form/complete";
+@import "layout/form/share";
+
+@import "core/js-styles";

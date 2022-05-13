@@ -59,6 +59,11 @@ server.post("/card", (req, res) => {
 
 //Enpoint tarjeta de la usuaria
 
-server.get("/card/id", (req, res) => {
+server.get(`/card/id`, (req, res) => {
   res.json("tarjeta creada");
 });
+
+
+// Servidores de estáticos
+const pathServerPublic = './src/public-react';
+server.use(express.static(pathServerPublic));

@@ -1,0 +1,119 @@
+.design {
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rem solid $col_grayline;
+  margin-top: 30rem;
+  margin-bottom: 10rem;
+
+  /* ----------SECTION LEGEND--------*/
+
+  &__legend {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rem;
+    padding-top: 20rem;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__square {
+    font-size: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $col_dull_orange;
+    margin-right: 10rem;
+  }
+
+  &__title {
+    font-family: $font_open;
+    font-weight: $font_w_semibold;
+    font-size: 18rem;
+    color: $col_gunmetal;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__up {
+    font-size: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $col_gunmetal;
+  }
+
+  /*SECTION COLORS*/
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+
+  &__subtitle {
+    font-size: 14rem;
+    font-family: $font_open;
+    text-transform: uppercase;
+    color: $col_gunmetal;
+    margin-left: 40rem;
+    width: 100%;
+  }
+
+  &__options {
+    margin-left: 160rem;
+    &--colour {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20rem;
+    }
+  }
+
+  &__circle {
+    margin-right: 10rem;
+    cursor: pointer;
+  }
+
+  //COLORES//
+
+  &__colour {
+    width: 30rem;
+    height: 25rem;
+    cursor: pointer;
+
+    &--1 {
+      background-color: $col_dark_green_blue;
+    }
+    &--2 {
+      background-color: $col_dirty_blue;
+    }
+
+    &--3 {
+      background-color: $col_hospital_green;
+    }
+
+    &--4 {
+      background-color: $col_dried_blood;
+    }
+
+    &--5 {
+      background-color: $col_rusty_red;
+    }
+
+    &--6 {
+      background-color: $col_tomato;
+    }
+
+    &--7 {
+      background-color: $col_slate;
+    }
+
+    &--8 {
+      background-color: $col_faded_orange;
+    }
+
+    &--9 {
+      background-color: $col_light_grey_blue;
+    }
+  }
+}

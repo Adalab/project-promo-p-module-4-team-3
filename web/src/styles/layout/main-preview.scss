@@ -1,0 +1,86 @@
+.main-preview {
+  background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  @media all and (min-width: $break_point_tablet) {
+    margin: 20rem 40rem;
+    min-height: 600px;
+    border-radius: 5rem;
+    height: auto;
+  }
+
+  .main-preview-wrapper {
+    width: 240rem;
+  }
+
+  &__button {
+    text-align: left;
+    font-family: $font_open;
+    font-size: 12rem;
+    color: $col_brownish_grey_05;
+    padding: 10rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid $col-white;
+    border-radius: 20rem;
+    margin-bottom: 30rem;
+    padding: 10rem 15rem;
+    @media all and (min-width: $break_point_tablet) {
+      transform: translateY(-30rem);
+      transition: 300ms;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $col_brownish_grey;
+      background-color: $col_brownish_grey_03;
+      border: 1px solid $col_brownish_grey_05;
+    }
+  }
+}
+
+.fa-trash-can {
+  margin-right: 10rem;
+}
+
+.profile-card {
+  background-color: $col-white;
+  font-family: $font_montserrat;
+  @media all and (min-width: $break_point_tablet) {
+    transform: translateY(-30rem);
+  }
+  &__name {
+    font-size: 18rem;
+    color: $col_dark_green_blue;
+    margin-bottom: 5rem;
+  }
+  &__occupation {
+    font-size: 16rem;
+    color: $col_brownish_grey_05;
+  }
+  &__social {
+    display: flex;
+    margin: 10rem 15rem;
+  }
+}
+
+.profile-card-border {
+  border-left: 5rem solid $col_dirty_blue;
+  padding-left: 20rem;
+  margin: 20rem 0;
+}
+
+.social-links {
+  display: inline-block;
+  width: 35rem;
+  text-align: center;
+  color: $col_dark_green_blue;
+  font-size: 18rem;
+  padding: 5rem;
+  margin: 5rem;
+  border: 2px solid $col_hospital_green;
+  border-radius: 50%;
+}

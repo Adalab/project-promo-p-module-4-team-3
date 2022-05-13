@@ -1,0 +1,107 @@
+.collapsed {
+  display: none;
+}
+
+.toggle_arrow {
+  transform: rotate(180deg);
+}
+
+.style_001 {
+  // Nombre
+  .profile-card__name {
+    color: $col_dark_green_blue;
+  }
+
+  // Borde
+  .profile-card-border {
+    border-left: 5rem solid $col_dirty_blue;
+  }
+
+  // Iconos
+  // Borde de los iconos
+  .social-links {
+    // Icono
+    color: $col_dark_green_blue;
+
+    // Borde
+    border: 2px solid $col_hospital_green;
+  }
+}
+
+.style_002 {
+  .profile-card__name {
+    color: $col_dried_blood;
+  }
+
+  .profile-card-border {
+    border-left: 5rem solid $col_rusty_red;
+  }
+
+  .social-links {
+    color: $col_dried_blood;
+    border: 2px solid $col_tomato;
+  }
+}
+
+.style_003 {
+  .profile-card__name {
+    color: $col_slate;
+  }
+
+  .profile-card-border {
+    border-left: 5rem solid $col_faded_orange;
+  }
+
+  .social-links {
+    color: $col_slate;
+    border: 2px solid $col_light_grey_blue;
+  }
+}
+
+// imagen preview
+.action {
+  text-align: center;
+  margin: 30px;
+}
+.action__upload-btn {
+  background: deeppink;
+  border-radius: 15px;
+  border: 0;
+  box-shadow: 0 0 5px rgba(#000, .3);
+  box-sizing: border-box;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  width: 250px;
+  cursor: pointer;
+}
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
+  darle los estilos que queremos */
+  display: none;
+}
+
+.profile {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.profile__image,
+.profile__preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+.profile__image {
+  width: 300px;
+  height: 300px;
+}
+
+.profile__preview {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  border: 1px solid $col_hospital_green;
+}
