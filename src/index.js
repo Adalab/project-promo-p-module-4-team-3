@@ -12,6 +12,7 @@ server.use(
     limit: "10mb",
   })
 );
+server.set("view engine", "ejs");
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
@@ -44,7 +45,7 @@ server.post("/card", (req, res) => {
     // Crear la respuesta
     const responseSuccess = {
       success: true,
-      cardURL: `https://localhost:4000/card/${newCard.id}`,
+      cardURL: `http://localhost:4000/card/${newCard.id}`,
     };
     // Envío la respuesta
     res.json(responseSuccess);
@@ -59,11 +60,20 @@ server.post("/card", (req, res) => {
 
 //Enpoint tarjeta de la usuaria
 
-server.get(`/card/id`, (req, res) => {
-  res.json("tarjeta creada");
+server.get(`/card/:id`, (req, res) => {
+  console.log(req.params.id);
+  const userCard = savedCards.find(card => card.id === req.params.id);
+  // console.log(userCard);
+
+  res.render('card', userCard);
+
 });
 
 
-// Servidores de estáticos
+// Servidores de estáticos de React
 const pathServerPublic = './src/public-react';
 server.use(express.static(pathServerPublic));
+
+// Servidores de estáticos de los estilos
+const pathServerPublicStyles = './src/public-css';
+server.use(express.static(pathServerPublicStyles));
