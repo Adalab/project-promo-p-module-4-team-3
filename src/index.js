@@ -15,7 +15,7 @@ server.use(
 server.set("view engine", "ejs");
 
 // Arrancamos el servidor en el puerto 3000
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -62,18 +62,16 @@ server.post("/card", (req, res) => {
 
 server.get(`/card/:id`, (req, res) => {
   console.log(req.params.id);
-  const userCard = savedCards.find(card => card.id === req.params.id);
+  const userCard = savedCards.find((card) => card.id === req.params.id);
   // console.log(userCard);
 
-  res.render('card', userCard);
-
+  res.render("card", userCard);
 });
 
-
 // Servidores de estáticos de React
-const pathServerPublic = './src/public-react';
+const pathServerPublic = "./src/public-react";
 server.use(express.static(pathServerPublic));
 
 // Servidores de estáticos de los estilos
-const pathServerPublicStyles = './src/public-css';
+const pathServerPublicStyles = "./src/public-css";
 server.use(express.static(pathServerPublicStyles));
