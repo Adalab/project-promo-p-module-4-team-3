@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
+const Database = require('better-sqlite3');
 
 // Creamos el servidor
 const server = express();
@@ -19,6 +20,12 @@ const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
+
+// Configurar la base de datos
+const db = new Database('./src/db/cards.db',
+  {verbose: console.log }
+);
+
 
 // Crear constante para guardar la tarjeta creada
 const savedCards = [];
@@ -40,21 +47,44 @@ server.post("/card", (req, res) => {
       ...req.body,
       id: uuidv4(),
     };
+
     // Añadir al listado de tarjetas
-    savedCards.push(newCard);
+    // savedCards.push(newCard);
+
+    // Insertar la tarjeta en la base de datos
+    const query = db.prepare('INSERT INTO card (palette, name, job, email, phone, linkedin, github, photo, uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+
+    // Ejecutar la consulta
+    const result = query.run(
+      newCard.palette,
+      newCard.name,
+      newCard.job,
+      newCard.email,
+      newCard.phone,
+      newCard.linkedin,
+      newCard.github,
+      newCard.photo,
+      newCard.id
+    );
+
     // Crear la respuesta
     const responseSuccess = {
       success: true,
       cardURL: `http://localhost:4000/card/${newCard.id}`,
     };
+
+
     // Envío la respuesta
     res.json(responseSuccess);
+
   } else {
+
     const responseError = {
       success: false,
       error: "No hemos podido hacer tu tarjeta",
     };
     res.json(responseError);
+
   }
 });
 
@@ -62,8 +92,11 @@ server.post("/card", (req, res) => {
 
 server.get(`/card/:id`, (req, res) => {
   console.log(req.params.id);
-  const userCard = savedCards.find((card) => card.id === req.params.id);
-  // console.log(userCard);
+  // const userCard = savedCards.find((card) => card.id === req.params.id);
+
+  // Preparar la sentencia para recoger los datos de la base de datos
+  const query = db.prepare('SELECT * FROM card WHERE uuid = ?');
+  const userCard = query.get(req.params.id);
 
   res.render("card", userCard);
 });
