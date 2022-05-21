@@ -42,8 +42,8 @@ function GetAvatar(props) {
   const avatar = props.avatar === '' ? "" : props.avatar;
   return (
     <div className="get-avatar">
-      <label className="get-avatar__label">
-        Get avatar!
+      <label className="complete__button">
+        Añadir imagen
         <input
           type="file"
           ref={myFileField}
