@@ -94,6 +94,8 @@ function Card(props) {
           handleLegendClick={handleLegendClick}
           collapsedClassS={collapsedClassS}
           arrowS={arrowS}
+          twitterHidden={props.twitterHidden}
+          setTwitterHidden={props.setTwitterHidden}
         />
       </form>
     </main>

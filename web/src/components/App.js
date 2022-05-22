@@ -9,6 +9,7 @@ import Landing from "./landing/Landing";
 import ls from "../services/localStorage";
 
 function App() {
+
   const [apiData, setApiData] = useState({});
 
   const [dataCard, setDataCard] = useState(
@@ -23,6 +24,10 @@ function App() {
       photo: "",
     })
   );
+
+  // variable para hacer aparecer y desaparecer twitter btn
+  const [twitterHidden, setTwitterHidden ] = useState('hidden')
+
 
   // ESTADO PARA AÑADIR IMAGEN
   const [avatar, setAvatar] = useState(ls.get("dataPhoto", ""));
@@ -90,6 +95,7 @@ function App() {
     });
     setApiData({});
     ls.clear();
+    setTwitterHidden('hidden')
   };
 
   const handleClickCreateCard = () => {
@@ -125,12 +131,20 @@ function App() {
 
               <Card
                 dataCard={dataCard}
+
                 handleInput={handleInput}
+
                 handleClickCreateCard={handleClickCreateCard}
+
                 apiData={apiData}
+
                 handleResetButton={handleResetButton}
+
                 avatar={avatar}
                 updateAvatar={updateAvatar}
+
+                twitterHidden={twitterHidden}
+                setTwitterHidden={setTwitterHidden}
               />
 
               <Footer />

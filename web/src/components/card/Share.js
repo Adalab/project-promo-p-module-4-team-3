@@ -1,14 +1,20 @@
+
 function Share(props) {
+
   const handleClick = (ev) => {
     ev.preventDefault();
     props.handleClickCreateCard();
+    // no me funciona el ternario pero hace lo que quiero
+    props.setTwitterHidden(props.apiData.succes ? 'hidden' : '')
   };
+
 
   const handleLegend = (ev) => {
     props.handleLegendClick({
       legendID: ev.currentTarget.id,
     });
   };
+
 
   return (
     <fieldset className='share'>
@@ -47,7 +53,7 @@ function Share(props) {
           <p>{props.apiData.success === false ? props.apiData.error : ""}</p>
           <button
             type='button'
-            className='share__twitter js_shareButtonTwitter'
+            className={`share__twitter js_shareButtonTwitter ${props.twitterHidden}`}
           >
             <a
               target='_blank'
