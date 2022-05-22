@@ -3,8 +3,8 @@ import GetAvatar from './GetAvatar';
 import { useState } from 'react';
 
 function Complete(props) {
-  let rexName = /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú-]+)*$/;
-  let rexJob = /^[a-zA-Z0-9._-]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú-]+)*$/;
+  let rexName = /^[-a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*$/;
+  let rexJob = /^[-a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\s]*$/;
   let rexEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
   let rexNum = /^[0-9+]{9,}$/;
 
