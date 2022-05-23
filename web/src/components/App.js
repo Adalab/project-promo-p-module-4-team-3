@@ -98,10 +98,20 @@ function App() {
     setTwitterHidden('hidden')
   };
 
+  console.log(apiData.success);
+
   const handleClickCreateCard = () => {
     dataApi(dataCard).then((info) => {
       setApiData(info);
     });
+
+    if (apiData.success === true){
+      console.log('soy el true');
+      setTwitterHidden('')
+    } else {
+      setTwitterHidden('hidden')
+      console.log('soy el else');
+    }
   };
 
   // FUNCIÓN PARA AÑADIR IMAGEN AL ESTADO

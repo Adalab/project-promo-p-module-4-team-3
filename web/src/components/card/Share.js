@@ -5,9 +5,8 @@ function Share(props) {
     ev.preventDefault();
     props.handleClickCreateCard();
     // no me funciona el ternario pero hace lo que quiero
-    props.setTwitterHidden(props.apiData.succes ? 'hidden' : '')
+    // props.setTwitterHidden(props.apiData.succes === true ? '' : 'hidden')
   };
-
 
   const handleLegend = (ev) => {
     props.handleLegendClick({
