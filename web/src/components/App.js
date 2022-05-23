@@ -28,6 +28,8 @@ function App() {
   // variable para hacer aparecer y desaparecer twitter btn
   const [twitterHidden, setTwitterHidden ] = useState('hidden')
 
+  const [msgHidden, setMsgHidden] = useState('hidden')
+
 
   // ESTADO PARA AÑADIR IMAGEN
   const [avatar, setAvatar] = useState(ls.get("dataPhoto", ""));
@@ -98,7 +100,7 @@ function App() {
     setTwitterHidden('hidden')
   };
 
-  console.log(apiData.success);
+  // console.log(apiData.success);
 
   const handleClickCreateCard = () => {
     dataApi(dataCard).then((info) => {
@@ -106,11 +108,11 @@ function App() {
     });
 
     if (apiData.success === true){
-      console.log('soy el true');
+      // console.log('soy el true');
       setTwitterHidden('')
     } else {
       setTwitterHidden('hidden')
-      console.log('soy el else');
+      // console.log('soy el else');
     }
   };
 
@@ -155,6 +157,9 @@ function App() {
 
                 twitterHidden={twitterHidden}
                 setTwitterHidden={setTwitterHidden}
+
+                msgHidden={msgHidden} 
+                setMsgHidden={setMsgHidden}
               />
 
               <Footer />

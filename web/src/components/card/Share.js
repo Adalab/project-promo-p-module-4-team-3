@@ -6,6 +6,7 @@ function Share(props) {
     props.handleClickCreateCard();
     // no me funciona el ternario pero hace lo que quiero
     // props.setTwitterHidden(props.apiData.succes === true ? '' : 'hidden')
+    props.setMsgHidden('')
   };
 
   const handleLegend = (ev) => {
@@ -49,7 +50,7 @@ function Share(props) {
           >
             {props.apiData.success ? props.apiData.cardURL : ""}
           </a>
-          <p>{props.apiData.success === false ? props.apiData.error : ""}</p>
+          <p className={props.msgHidden}>{props.apiData.success === false ? props.apiData.error : ""}</p>
           <button
             type='button'
             className={`share__twitter js_shareButtonTwitter ${props.twitterHidden}`}

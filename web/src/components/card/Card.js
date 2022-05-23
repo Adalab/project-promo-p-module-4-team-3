@@ -30,6 +30,7 @@ function Card(props) {
       setArrowD('');
       setArrowC('toggle_arrow');
       setArrowS('toggle_arrow');
+      props.setMsgHidden('hidden');
       if (collapsedClassD === '') {
         setCollapsedClassD('collapsed');
         setArrowD('toggle_arrow');
@@ -41,6 +42,7 @@ function Card(props) {
       setArrowD('toggle_arrow');
       setArrowC('');
       setArrowS('toggle_arrow');
+      props.setMsgHidden('hidden');
       if (collapsedClassC === '') {
         setCollapsedClassC('collapsed');
         setArrowC('toggle_arrow');
@@ -52,6 +54,7 @@ function Card(props) {
       setArrowD('toggle_arrow');
       setArrowC('toggle_arrow');
       setArrowS('');
+      props.setMsgHidden('hidden');
       if (collapsedClassS === '') {
         setCollapsedClassS('collapsed');
         setArrowS('toggle_arrow');
@@ -86,6 +89,7 @@ function Card(props) {
           // PROPS PARA AÑADIR IMAGEN CON 'GetAvatar'
           avatar={props.avatar} 
           updateAvatar={props.updateAvatar}
+
         />
         <Share
           dataCard={props.datacard}
@@ -96,6 +100,9 @@ function Card(props) {
           arrowS={arrowS}
           twitterHidden={props.twitterHidden}
           setTwitterHidden={props.setTwitterHidden}
+
+          msgHidden={props.msgHidden} 
+          setMsgHidden={props.setMsgHidden}
         />
       </form>
     </main>

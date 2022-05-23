@@ -33,13 +33,11 @@ function Complete(props) {
   };
 
   const validationForm = (ev) => {
-    console.log(ev.currentTarget.id);
 
     if (ev.currentTarget.id === 'name') {
       if (ev.currentTarget.value < 1 || !rexName.test(ev.currentTarget.value)) {
         setNameWarning('Por favor ingresa un nombre valido');
         setNameClass('wrong');
-        console.log('sucedo');
       } else {
         setNameWarning('');
         setNameClass('');
@@ -49,7 +47,6 @@ function Complete(props) {
       if (ev.currentTarget.value < 1 || !rexJob.test(ev.currentTarget.value)) {
         setJobWarning('Por favor ingresa un puesto valido');
         setJobClass('wrong');
-        console.log('sucedo');
       } else {
         setJobWarning('');
         setJobClass('');
@@ -63,7 +60,6 @@ function Complete(props) {
       ) {
         setemailWarning('Por favor ingresa un email valido');
         setemailClass('wrong');
-        console.log('sucedo');
       } else {
         setemailWarning('');
         setemailClass('');
