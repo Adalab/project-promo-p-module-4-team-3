@@ -109,9 +109,9 @@ function App() {
 
     if (apiData.success === true){
       // console.log('soy el true');
-      setTwitterHidden('')
-    } else {
       setTwitterHidden('hidden')
+    } else {
+      setTwitterHidden('')
       // console.log('soy el else');
     }
   };

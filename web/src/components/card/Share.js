@@ -10,6 +10,8 @@ function Share(props) {
     props.setDisabled('disabled')
   };
 
+  console.log(props.apiData.success);
+
   const handleLegend = (ev) => {
     props.handleLegendClick({
       legendID: ev.currentTarget.id,
