@@ -51,13 +51,28 @@
     font-size: 18rem;
     text-transform: uppercase;
     border-radius: 12rem;
-    border-color: $col_white;
-    background-color: $col_dull_orange;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#03a9f4);
+    background-size: 300%;
+    z-index: 1;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     display: block;
+
+    cursor: pointer;
+
     &:hover {
-     cursor: pointer;
+      animation: ani 8s linear infinite;
+      border: none;
     }
+
+    @keyframes ani {
+      0% {
+       background-position: 0%;
+      }
+     
+      100% {
+       background-position: 400%;
+      }
+     }
   }
 
   &__card {
