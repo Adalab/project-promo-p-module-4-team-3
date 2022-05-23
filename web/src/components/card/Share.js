@@ -7,6 +7,7 @@ function Share(props) {
     // no me funciona el ternario pero hace lo que quiero
     // props.setTwitterHidden(props.apiData.succes === true ? '' : 'hidden')
     props.setMsgHidden('')
+    props.setDisabled('disabled')
   };
 
   const handleLegend = (ev) => {
@@ -36,7 +37,9 @@ function Share(props) {
         <button
           onClick={handleClick}
           type='submit'
-          className='share__button js_create_button js_buttonOrange'
+          className= {`share__button js_create_button js_buttonOrange ${props.disabled}`}
+
+          disabled={props.disabled}
         >
           <i className='fa-solid fa-address-card share__card'></i>Crear tarjeta
         </button>

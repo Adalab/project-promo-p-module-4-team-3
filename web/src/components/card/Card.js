@@ -18,6 +18,10 @@ function Card(props) {
   const [arrowC, setArrowC] = useState('toggle_arrow');
   const [arrowS, setArrowS] = useState('toggle_arrow');
 
+  // variables de estado para disabled 
+
+  const [disabled, setDisabled] = useState('')
+
 
   // colapsar las secciones
   const handleLegendClick = (data) => {
@@ -31,6 +35,7 @@ function Card(props) {
       setArrowC('toggle_arrow');
       setArrowS('toggle_arrow');
       props.setMsgHidden('hidden');
+      setDisabled('')
       if (collapsedClassD === '') {
         setCollapsedClassD('collapsed');
         setArrowD('toggle_arrow');
@@ -43,6 +48,7 @@ function Card(props) {
       setArrowC('');
       setArrowS('toggle_arrow');
       props.setMsgHidden('hidden');
+      setDisabled('')
       if (collapsedClassC === '') {
         setCollapsedClassC('collapsed');
         setArrowC('toggle_arrow');
@@ -103,6 +109,9 @@ function Card(props) {
 
           msgHidden={props.msgHidden} 
           setMsgHidden={props.setMsgHidden}
+
+          disabled={disabled} 
+          setDisabled={setDisabled}
         />
       </form>
     </main>
