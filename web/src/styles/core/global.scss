@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient($backgroundDarkBlue, $backgroundMediumBlue);
+}
+
 .landing-h1 {
   font-family: $font_merriweather;
   font-size: 19rem;
@@ -37,12 +41,14 @@
   flex-direction: column;
   background-color: white;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(245, 245, 245, 1) 0%,
     rgba(255, 255, 255, 1) 5%,
     rgba(255, 255, 255, 1) 100%
-  );
+  ); */
+
+  background: none;
 
   @media all and (min-width: $break_point_tablet) {
     min-height: calc(100vh - 60rem - 110rem);

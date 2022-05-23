@@ -1,13 +1,22 @@
 .main-preview {
-  background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  background-image: url(../../images/galaxia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  box-shadow: 10px 10px 20px $darkShadow,
+             -10px -10px 20px $mediumShadow;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   height: 500px;
+
   @media all and (min-width: $break_point_tablet) {
-    margin: 20rem 40rem;
+    margin: 20rem 40rem 30rem;
     min-height: 600px;
     border-radius: 5rem;
     height: auto;
@@ -21,23 +30,30 @@
     text-align: left;
     font-family: $font_open;
     font-size: 12rem;
-    color: $col_brownish_grey_05;
-    padding: 10rem;
+    color: $resetButonShine;
     text-transform: uppercase;
+    text-shadow: 0 0 2em $resetButonMedium;
+
+    margin-bottom: 40rem;
+    padding: 12rem 17rem;
+
     background-color: transparent;
-    border: 1px solid $col-white;
+    border: .25em solid $resetButonShine;
     border-radius: 20rem;
-    margin-bottom: 30rem;
-    padding: 10rem 15rem;
+    box-shadow: 0 0 1em .25em $resetButonShine,
+        0 0 4em 1em $resetButonMedium,
+        inset 0 0 .75em .25em $resetButonShine;
+
+    transition: all 0.3s;
+
     @media all and (min-width: $break_point_tablet) {
       transform: translateY(-30rem);
-      transition: 300ms;
+      /* transition: 300ms; */
     }
     &:hover {
       cursor: pointer;
-      color: $col_brownish_grey;
-      background-color: $col_brownish_grey_03;
-      border: 1px solid $col_brownish_grey_05;
+      color: $resetButonDark;
+      background-color: $resetButonShineTwo;
     }
   }
 }
@@ -48,7 +64,12 @@
 
 .profile-card {
   background-color: $col-white;
+  border-radius: 10px;
   font-family: $font_montserrat;
+
+  box-shadow: $transparentBlack 0px 2px 4px, $transparentBlackTwo 0px 7px 13px -3px, $transparentBlackThree 0px -3px 0px inset, 15px 15px 30px $shineShadow, -15px -15px 30px $col_white;
+
+
   @media all and (min-width: $break_point_tablet) {
     transform: translateY(-30rem);
   }

@@ -52,20 +52,31 @@
 
   &__label {
     font-family: $font_open;
-    font-size: 14rem;
+    font-size: 15rem;
     font-weight: bold; /*En zeplin es normal, pero creo que se lee mejor con bold, si os aprece bien?*/
     color: $col_dark_green_blue;
     margin-bottom: 10rem;
   }
 
   &__input {
-    border: 1rem solid $col_hospital_green;
-    padding: 8rem;
+    background: transparent;
+    border: 2px solid $inputBorder;
+    /* border: 1rem solid $col_hospital_green; */
+    border-radius: 10px;
+
+    padding: 15rem 10rem;
     margin-bottom: 20rem;
+
     height: 30rem;
+
     font-family: $font_open;
     font-size: 14rem;
+    color: $inputBorder;
   }
+
+  &__input:active {
+    box-shadow: 2px 2px 15px $inputBorder inset;
+   }
 
   /*---PARTE AÑADIR IMAGEN---*/
 
@@ -77,9 +88,12 @@
   &__button {
     width: 140rem;
     height: 30rem;
+
     padding: 5rem 22rem;
     margin: 0 20rem 20rem 0;
+
     background-color: #e17334;
+
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 14rem;
